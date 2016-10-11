@@ -7,3 +7,15 @@
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.title {
+    font-size: 72px;
+    margin-bottom: 40px;
+    text-align:center;
+}
+
+.panel-login,
+.panel-register,
+.panel-forgot {
+  margin-top: 10em;
+}

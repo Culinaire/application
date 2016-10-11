@@ -12,5 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    if(Auth::check()) {
+      return redirect()->action('HomeController@index');
+    }
+
+    return redirect()->route('login');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+Route::resource('users', 'UsersController');
