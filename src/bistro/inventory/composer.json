@@ -1,0 +1,15 @@
+{
+    "name": "bistro/inventory",
+    "description": "The Bistro Inventory Component.",
+    "keywords": ["component", "bistro", "inventory"],
+    "license": "MIT",
+    "type": "package",
+    "require": {
+        "php": ">=5.6.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bistro\\": "src/"
+        }
+    }
+}
