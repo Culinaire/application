@@ -7,7 +7,7 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 
 class RouteServiceProvider extends ServiceProvider
 {
-    protected $prefix = "bistro4";
+    protected $prefix = "bistro";
 
     protected $middleware = ["web", "auth"];
 
