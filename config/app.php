@@ -168,6 +168,7 @@ return [
          */
 
         Collective\Html\HtmlServiceProvider::class,
+        Bistro\Bistro\Providers\BistroServiceProvider::class,
 
         /*
          * Application Service Providers...

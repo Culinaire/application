@@ -25,4 +25,19 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function inventory()
+    {
+        return view('pages.inventory');
+    }
+
+    public function food()
+    {
+        return view('pages.food');
+    }
+
+    public function employees()
+    {
+        return view('pages.employees');
+    }
 }
