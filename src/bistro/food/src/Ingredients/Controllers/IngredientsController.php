@@ -1,15 +1,15 @@
 <?php
 
-namespace Bistro\Food\Recipes\Controllers;
+namespace Bistro\Food\Ingredients\Controllers;
 
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-use Bistro\Food\Recipes\Models\Recipe as Model;
+use Bistro\Food\Ingredients\Models\Ingredient as Model;
 
-class RecipesController extends Controller
+class IngredientsController extends Controller
 {
-    protected $handle = "recipe";
+    protected $handle = "ingredient";
 
     public function __construct()
     {
@@ -24,7 +24,7 @@ class RecipesController extends Controller
     public function index()
     {
         $data = Model::all();
-        return view( $this->layout.'::recipe', ['view' => 'index'])->with($this->layout, $data);
+        return view( $this->layout.'::ingredient', ['view' => 'index'])->with($this->layout, $data);
     }
 
     /**
@@ -34,7 +34,7 @@ class RecipesController extends Controller
      */
     public function create()
     {
-        return view( $this->layout.'::recipe', ['view' => 'create']);
+        return view( $this->layout.'::ingredient', ['view' => 'create']);
     }
 
     /**
@@ -57,7 +57,7 @@ class RecipesController extends Controller
     public function show($id)
     {
         $data = Model::find($id);
-        return view( $this->layout.'::recipe', ['view' => 'show'])->with($this->handle, $data);
+        return view( $this->layout.'::ingredient', ['view' => 'show'])->with($this->handle, $data);
     }
 
     /**
@@ -69,7 +69,7 @@ class RecipesController extends Controller
     public function edit($id)
     {
         $data = Model::find($id);
-        return view( $this->layout.'::recipe', ['view' => 'edit'])->with($this->handle, $data);
+        return view( $this->layout.'::ingredient', ['view' => 'edit'])->with($this->handle, $data);
     }
 
     /**

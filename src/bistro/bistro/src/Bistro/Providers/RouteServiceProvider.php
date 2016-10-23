@@ -59,6 +59,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapFoodRoutes()
     {
         Route::resource('recipes', 'Bistro\Food\Recipes\Controllers\RecipesController');
+        Route::resource('ingredients', 'Bistro\Food\Ingredients\Controllers\IngredientsController');
 
     }
 

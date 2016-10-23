@@ -14,7 +14,7 @@ class BistroServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //$this->loadViewsFrom(__DIR__.'/../../../resources/views/recipes/', 'recipes');       
+        $this->loadViewsFrom(__DIR__.'/../../../resources/views/dashboard/', 'dashboard');       
     }
 
     /**
@@ -26,6 +26,7 @@ class BistroServiceProvider extends ServiceProvider
     {
         $this->app->register('\Bistro\Bistro\Providers\RouteServiceProvider');
         $this->app->register('\Bistro\Food\Recipes\Providers\RecipeServiceProvider');
+        $this->app->register('\Bistro\Food\Ingredients\Providers\IngredientServiceProvider');
         $this->app->register('Bistro\Inventory\Products\Providers\ProductServiceProvider');
         $this->app->register('\Bistro\Inventory\Merchants\Providers\MerchantServiceProvider');
     }

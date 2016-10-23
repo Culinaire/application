@@ -1,10 +1,11 @@
-
 @extends('dashboard::layouts.twoten')
 
 @section('sidebar')
-  @include('merchants::sidebar')
+  @include('ingredients::sidebar')
 @endsection
 
 @section('content')
-  @include('merchants::'.$view)
+
+  @include('ingredients::'.$view)
+  
 @endsection

@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>Recipes</h1>
+  <h1>Ingredients</h1>
 </div>
 
 <table class="table table-striped">
