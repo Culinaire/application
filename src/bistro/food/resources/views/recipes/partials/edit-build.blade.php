@@ -1,4 +1,4 @@
-{!! Form::model($recipe, ['route'=> ['app.recipes.build.update',$recipe->id], 'class'=>'form form-horizontal', 'method'=>'put']) !!}
+{!! Form::model($recipe, ['route'=> ['recipes.update',$recipe->id], 'class'=>'form form-horizontal', 'method'=>'put']) !!}
 
 <div class="form-group">
   {!! Form::label('name', 'Name: ', ['class'=>'col-md-3 control-label']) !!}

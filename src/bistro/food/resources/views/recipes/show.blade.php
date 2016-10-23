@@ -4,7 +4,7 @@
     <h1>
       {{ $recipe['name'] }}
       <div class="hidden-print pull-right">
-        <a class="btn btn-primary" href="#"><span class="fa fa-pencil"></span> Edit</a>
+        <a class="btn btn-primary" href="{{ route('recipes.edit', ['id'=> $recipe->id]) }}"><span class="fa fa-pencil"></span> Edit</a>
       </div>
     </h1>
   </div>

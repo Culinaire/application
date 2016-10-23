@@ -19,6 +19,23 @@ class Recipe extends Model
     'quality'     => 'array'
   ];
 
+  public function uoms()
+  {
+    $array = [
+      'oz' => 'oz',
+      'ozm' => 'ozm',
+      'lb' => 'lb',
+      'lbm' => 'lbm',
+      'qt' => 'qt',
+      'qts' => 'qts',
+      'gal' => 'gal',
+      'gals' => 'gals',
+      'cup' => 'cup',
+      'cups' => 'cups'
+    ];
+    return $array;
+  }
+
 
   public function getCategoryAttribute()
   {
