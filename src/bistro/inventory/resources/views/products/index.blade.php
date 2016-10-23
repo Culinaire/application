@@ -11,8 +11,8 @@
     <tbody>
       @foreach($products as $product)
       <tr>
-        <td>{{ $product->name }}</td>
-        <td>{{ $product->vendor->name }}</td>
+        <td><a href="{{ route('products.show', ['id'=> $product->id]) }}">{{ $product->description }}</a></td>
+        <td><a href="{{ route('merchants.show', ['id'=> $product->merchant->id]) }}">{{ $product->merchant->name }}</a></td>
       </tr> 
       @endforeach 
     </tbody>

@@ -11,7 +11,7 @@
     <tbody>
       @foreach($merchants as $merchant)
       <tr>
-        <td>{{ $merchant->name }}</td>
+        <td><a href="{{ route('merchants.show', ['id'=> $merchant->id]) }}">{{ $merchant->name }}</a></td>
         <td>{{ $merchant->phone }}</td>
         <td><a href="{{ url($merchant->portal_url) }}">Portal</a></td>
       </tr> 
