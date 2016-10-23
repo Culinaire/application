@@ -12,7 +12,7 @@ class CreateRecipesTable extends Migration
      */
     public function up()
     {
-        Schema::create('recipe_originals', function (Blueprint $table) {
+        Schema::create('recipes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('slug')->unique();
@@ -33,6 +33,6 @@ class CreateRecipesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('recipe_originals');
+        Schema::drop('recipes');
     }
 }
