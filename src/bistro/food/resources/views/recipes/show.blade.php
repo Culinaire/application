@@ -11,7 +11,7 @@
 
   
   @include('recipes::partials.ingredients', ['ingredients' => $recipe->recipeIngredients])
-  @include('recipes::partials.procedures', ['procedures' => []])
-  @include('recipes::partials.quality', ['quality'=> []])
+  @include('recipes::partials.procedures', ['procedures' => $recipe->procedures])
+  @include('recipes::partials.quality', ['quality'=> $recipe->quality])
 
 </div>

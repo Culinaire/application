@@ -14,7 +14,7 @@ class BistroServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/../../../resources/views/dashboard/', 'dashboard');       
+        //$this->loadViewsFrom(__DIR__.'/../../../resources/views/dashboard/', 'dashboard');       
     }
 
     /**

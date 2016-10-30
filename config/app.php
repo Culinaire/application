@@ -169,6 +169,7 @@ return [
 
         Collective\Html\HtmlServiceProvider::class,
         Bistro\Bistro\Providers\BistroServiceProvider::class,
+        Butler\Dashboard\DashboardServiceProvider::class,
 
         /*
          * Application Service Providers...

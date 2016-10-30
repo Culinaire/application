@@ -4,6 +4,6 @@
   @include('recipes::sidebar')
 @endsection
 
-@section('content')
+@section('content-main')
   @include('recipes::'.$view)
 @endsection

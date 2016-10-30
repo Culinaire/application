@@ -1,4 +1,4 @@
-@extends('master')
+@extends('dashboard::master')
 
 @push('head')
   <!-- CSRF Token -->

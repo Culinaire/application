@@ -5,6 +5,6 @@
   @include('merchants::sidebar')
 @endsection
 
-@section('content')
+@section('content-main')
   @include('merchants::'.$view)
 @endsection

@@ -4,6 +4,6 @@
   @include('products::sidebar')
 @endsection
 
-@section('content')
+@section('content-main')
   @include('products::'.$view)  
 @endsection

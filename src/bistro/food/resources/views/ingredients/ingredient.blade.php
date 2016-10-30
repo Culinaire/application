@@ -4,7 +4,7 @@
   @include('ingredients::sidebar')
 @endsection
 
-@section('content')
+@section('content-main')
 
   @include('ingredients::'.$view)
   

@@ -1,6 +1,6 @@
-@extends('dashboard::layouts.twoten')
+@extends('dashboard::layouts.full')
 
-@section('content')
+@section('content-main')
   
   <div class="page-header">
     <h1>Food</h1>
