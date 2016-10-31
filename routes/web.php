@@ -21,6 +21,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
-Route::get('/food', 'HomeController@food');
-//Route::resource('users', 'UsersController');
+// Order Guide
+Route::get('orderguide', function () {
+  $products = Bistro\Inventory\Products\Models\Product::all();
+  return view('guides.order')->with('products', $products);
+});
