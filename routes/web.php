@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     if(Auth::check()) {
-      return redirect()->action('HomeController@index');
+      return redirect()->route('dashboard');
     }
 
     return redirect()->route('login');
