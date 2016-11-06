@@ -13,3 +13,11 @@
 @elseif ($recipe->type == 'build')
   @include('recipes::partials.edit-build', ['recipe'=>$recipe])
 @endif
+
+@if ( $recipe->recipeIngredients )
+  @foreach($recipe->recipeIngredients as $ing)
+    @include('recipes::partials.edit-ingredients', ['ingredient' => $ing])
+  @endforeach
+@else
+  <p>No Ingredients</p>
+@endif

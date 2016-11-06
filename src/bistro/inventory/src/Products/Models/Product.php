@@ -12,4 +12,11 @@ class Product extends Model
     {
       return $this->belongsTo('Bistro\Inventory\Merchants\Models\Merchant');
     }
+
+    public function getEachPriceAttribute()
+    {
+      $price = $this->purchase_price;
+      $each = $this->pack_qty;
+      return $price/$each;
+    }
 }

@@ -60,6 +60,7 @@ class RouteServiceProvider extends ServiceProvider
     {
         Route::resource('recipes', 'Bistro\Food\Recipes\Controllers\RecipesController');
         Route::resource('ingredients', 'Bistro\Food\Ingredients\Controllers\IngredientsController');
+        Route::resource('recipe-ingredients', 'Bistro\Food\Ingredients\Controllers\RecipeIngredientsController');
 
     }
 
