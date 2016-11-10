@@ -19,7 +19,7 @@ class Merchant extends Model
       return $this->hasMany('Bistro\Inventory\Merchants\Models\MerchantRep');
     }
 
-    public function list()
+    public function listMerchants()
     {
       $model = $this->all();
       $merchants = [];
