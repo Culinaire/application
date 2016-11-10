@@ -8,8 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class MerchantRep extends Model
 {
-    public function merchant()
-    {
-      return $this->belongsTo('Merchant');
-    }
+  protected $guarded = ["id"];
+
+  public function merchant()
+  {
+    return $this->belongsTo('Merchant');
+  }
 }

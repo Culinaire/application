@@ -22,7 +22,9 @@ Route::get('/', function () {
 Auth::routes();
 
 // Order Guide
+/*
 Route::get('orderguide', function () {
   $products = Bistro\Inventory\Products\Models\Product::all();
   return view('guides.order')->with('products', $products);
 });
+*/

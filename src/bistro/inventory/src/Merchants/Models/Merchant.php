@@ -18,4 +18,16 @@ class Merchant extends Model
     {
       return $this->hasMany('Bistro\Inventory\Merchants\Models\MerchantRep');
     }
+
+    public function list()
+    {
+      $model = $this->all();
+      $merchants = [];
+      $merchants[0] = 'None';
+      foreach($model as $merchant) {
+        $merchants[$merchant->id] = $merchant->name;
+      }
+
+      return $merchants;
+    }
 }

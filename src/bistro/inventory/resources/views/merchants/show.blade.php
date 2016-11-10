@@ -3,15 +3,16 @@
   </div>
 
  <div id="merchant-reps" class="col-sm-12">
-   <div class="panel panel-default">
+   <div class="panel panel-primary">
    
    <div class="panel-heading">
      <h2 class="panel-title">Reps</h2>
+     <div class="pull-right"><a class="btn btn-info" href="{{ route('merchantreps.create', ['merchant_id'=>$merchant->id]) }}">Add Rep</a></div>
    </div>
 
    <ul class="list-group">
      @foreach($merchant->reps as $rep)
-     <li class="list-group-item">{{ $rep->first }} {{ $rep->last }}</li>
+     <li class="list-group-item">{{ $rep->first }} {{ $rep->last }} <a href="{{ route('merchantreps.edit', ['id'=>$rep->id]) }}">Edit</a></li>
      @endforeach
    </ul>
  </div>

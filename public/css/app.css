@@ -5905,6 +5905,13 @@ button.close {
     padding-left: 20px;
     line-height: 50px !important; } }
 
+.sidebar .nav > li > a:hover,
+.sidebar .nav > li > a:focus {
+  background-color: inherit; }
+
+.sidebar-heading {
+  padding-left: 10px; }
+
 body {
   padding-top: 50px; }
 

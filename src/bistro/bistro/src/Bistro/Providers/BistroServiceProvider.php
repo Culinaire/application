@@ -26,10 +26,9 @@ class BistroServiceProvider extends ServiceProvider
     {
         // Service Providers
         $this->app->register('\Bistro\Bistro\Providers\RouteServiceProvider');
-        $this->app->register('\Bistro\Food\Recipes\Providers\RecipeServiceProvider');
-        $this->app->register('\Bistro\Food\Ingredients\Providers\IngredientServiceProvider');
-        $this->app->register('Bistro\Inventory\Products\Providers\ProductServiceProvider');
-        $this->app->register('\Bistro\Inventory\Merchants\Providers\MerchantServiceProvider');
+        
+        $this->app->register('\Bistro\Inventory\Inventory\Providers\InventoryServiceProvider');
+        $this->app->register('\Bistro\Food\Food\Providers\FoodServiceProvider');
 
         // Facades
         $this->app->bind('bistro','Bistro\Bistro\Helpers');

@@ -1,4 +1,3 @@
-
 @extends('dashboard::layouts.twoten')
 
 @section('sidebar')

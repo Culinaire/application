@@ -2,6 +2,7 @@
 
 namespace Bistro\Inventory\Products\Providers;
 
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 class ProductServiceProvider extends ServiceProvider
@@ -14,7 +15,9 @@ class ProductServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadViewsFrom(__DIR__.'/../../../resources/views/products/', 'products');
+        $this->loadViewsFrom(__DIR__.'/../../../resources/views/orderguides/', 'orderguides');
         $this->loadMigrationsFrom(__DIR__.'/../../../database/migrations');
+        $this->mapRoutes();
     }
 
     /**
@@ -25,6 +28,11 @@ class ProductServiceProvider extends ServiceProvider
     public function register()
     {
         //$this->app->bind('recipes', 'Bistro\Food\Recipes\Facades\RecipesFacade');
+    }
+
+    public function mapRoutes()
+    {
+        
     }
 
 }

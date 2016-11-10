@@ -4,6 +4,7 @@ namespace Bistro\Inventory\Products\Controllers;
 
 use App\Http\Controllers\Controller;
 
+use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Bistro\Inventory\Products\Models\Product as Model;
 
@@ -33,9 +34,14 @@ class ProductsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        return view( $this->layout.'::product', ['view' => 'create']);
+        if($request->has('merchant_id')) {
+            $merchant_id = $request->merchant_id;
+        } else {
+            $merchant_id = 0;
+        }
+        return view( $this->layout.'::product', ['view' => 'create' , 'merchant_id' => $merchant_id]);
     }
 
     /**

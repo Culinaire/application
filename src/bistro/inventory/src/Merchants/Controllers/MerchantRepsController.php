@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Bistro\Inventory\Merchants\Controllers;
+
+use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-
+use Bistro\Inventory\Merchants\Models\MerchantRep;
 class MerchantRepsController extends Controller
 {
     
@@ -24,9 +26,14 @@ class MerchantRepsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        if($request->has('merchant_id')) {
+            $merchant_id = $request->merchant_id;
+        } else {
+            $merchant_id = 0;
+        }
+        return view('merchantreps::merchantrep', ['view'=>'create', 'merchant_id'=> $merchant_id]);
     }
 
     /**
@@ -37,7 +44,25 @@ class MerchantRepsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Form Request
+        $input = $request->input();
+
+        // Init
+        $rep = MerchantRep::create();
+        
+        // Map
+        $rep->merchant_id = $input['merchant_id'];
+        $rep->first = $input['first'];
+        $rep->last = $input['last'];
+        $rep->phone = $input['phone'];
+        $rep->cell = $input['cell'];
+        $rep->email = $input['email'];
+
+        // Save
+        $rep->save();
+
+        // Load View
+        return redirect()->route('merchants.show', ['id'=>$rep->merchant_id]);
     }
 
     /**
@@ -59,7 +84,8 @@ class MerchantRepsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $rep = MerchantRep::find($id);
+        return view('merchantreps::merchantrep', ['view'=>'edit'])->with('rep', $rep);
     }
 
     /**
@@ -71,7 +97,26 @@ class MerchantRepsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // Form Request
+        $input = $request->input();
+        //dd($input);
+
+        // Init
+        $rep = MerchantRep::find($id);
+        
+        // Map
+        $rep->merchant_id = $input['merchant_id'];
+        $rep->first = $input['first'];
+        $rep->last = $input['last'];
+        $rep->phone = $input['phone'];
+        $rep->cell = $input['cell'];
+        $rep->email = $input['email'];
+
+        // Save
+        $rep->save();
+
+        // Load View
+        return redirect()->route('merchants.show', ['id'=>$rep->merchant_id]);
     }
 
     /**

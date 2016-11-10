@@ -6,5 +6,5 @@
 @endsection
 
 @section('content-main')
-  @include('merchants::'.$view)
+  @include('merchantreps::'.$view)
 @endsection

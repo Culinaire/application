@@ -6,7 +6,7 @@
   
   <div class="container-fluid">
     <div class="row">
-      <div id="sidebar" class="col-sm-2 sidebar">
+      <div id="sidebar" class="col-sm-2 sidebar app-sidebar">
         @yield('sidebar')
       </div>
 

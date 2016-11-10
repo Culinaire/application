@@ -1,5 +1,10 @@
 <div class="page-header">
-  <h1>{{ $product->description }}</h1>
+  <div class="col-sm-8">
+    <h1>{{ $product->description }}</h1>
+  </div>
+  <div class="col-sm-4">
+    <a href="{{ route("products.edit", ['id'=> $product->id])}}" class="btn btn-success pull-right"> Edit</a>
+  </div>
 </div>
 
 {!! Form::model($product, ['route' => ['products.update', $product->id], 'class'=>'form-horizantal']) !!}

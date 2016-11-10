@@ -1,7 +1,7 @@
 @extends('dashboard::layouts.twoten')
 
 @section('sidebar')
-  @include('products::sidebar')
+  @include('inventory::sidebar')
 @endsection
 
 @section('content-main')

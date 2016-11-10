@@ -67,7 +67,9 @@ class RouteServiceProvider extends ServiceProvider
      protected function mapInventoryRoutes()
     {
         Route::resource('products', 'Bistro\Inventory\Products\Controllers\ProductsController');
+        Route::resource('orderguides', 'Bistro\Inventory\Products\Controllers\ProductCollectionsController');
         Route::resource('merchants', 'Bistro\Inventory\Merchants\Controllers\MerchantsController');
+        Route::resource('merchantreps', 'Bistro\Inventory\Merchants\Controllers\MerchantRepsController');
 
     }
 

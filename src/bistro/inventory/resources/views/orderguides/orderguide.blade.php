@@ -1,4 +1,3 @@
-
 @extends('dashboard::layouts.twoten')
 
 @section('sidebar')
@@ -6,5 +5,5 @@
 @endsection
 
 @section('content-main')
-  @include('merchants::'.$view)
+  @include('orderguides::'.$view)  
 @endsection

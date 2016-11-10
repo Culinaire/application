@@ -14,6 +14,7 @@ class MerchantServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadViewsFrom(__DIR__.'/../../../resources/views/merchants/', 'merchants');
+        $this->loadViewsFrom(__DIR__.'/../../../resources/views/merchantreps/', 'merchantreps');
         $this->loadMigrationsFrom(__DIR__.'/../../../database/migrations');
     }
 
