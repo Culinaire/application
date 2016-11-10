@@ -44,7 +44,7 @@
 <div class="form-group">
   {!! Form::label('merchant_id', 'Merchant:', ['class'=>'control-label col-sm-2']) !!}
   <div class="col-sm-10">
-    {!! Form::select('merchant_id', $merchants->list(), old('merchant_id'), ['class'=>'form-control']) !!}
+    {!! Form::select('merchant_id', $merchants->listMerchants(), old('merchant_id'), ['class'=>'form-control']) !!}
   </div>
 </div>
 

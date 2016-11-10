@@ -2,7 +2,11 @@
 @inject('merchants', 'Bistro\Inventory\Merchants\Models\Merchant')
 
 <div class="page-header">
-  <h1>Edit Product</h1>
+  <div class="row">
+    <div class="col-sm-8">
+      <h1>Edit Product</h1>
+    </div>
+  </div> 
 </div>
 
 {!! Form::model($product, ['route'=> ['products.create', $product->id], 'class'=>"form-horizontal", 'method'=>'put']) !!}
@@ -38,7 +42,7 @@
   <div class="form-group">
     {!! Form::label('merchant_id', 'Merchant:', ['class'=>'control-label col-sm-2']) !!}
     <div class="col-sm-10">
-      {!! Form::select('merchant_id', $merchants->list(), old('merchant_id'), ['class'=>'form-control']) !!}
+      {!! Form::select('merchant_id', $merchants->listMerchants(), old('merchant_id'), ['class'=>'form-control']) !!}
     </div>
   </div>
 

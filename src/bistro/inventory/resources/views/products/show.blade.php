@@ -1,13 +1,15 @@
 <div class="page-header">
-  <div class="col-sm-8">
+  <div class="row">
+    <div class="col-sm-8">
     <h1>{{ $product->description }}</h1>
   </div>
   <div class="col-sm-4">
     <a href="{{ route("products.edit", ['id'=> $product->id])}}" class="btn btn-success pull-right"> Edit</a>
   </div>
+  </div> 
 </div>
 
-{!! Form::model($product, ['route' => ['products.update', $product->id], 'class'=>'form-horizantal']) !!}
+{!! Form::model($product, ['route' => ['products.show', $product->id], 'class'=> "form-horizontal", 'method'=> 'get']) !!}
 
 <div class="form-group">
   {!! Form::label('plu', 'PLU',['class'=>"control-label col-sm-2"]) !!}
