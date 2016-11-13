@@ -32,7 +32,8 @@
             "App\\": "app/",
             "Bistro\\": "src/bistro/bistro/src/",
             "Bistro\\Food\\": "src/bistro/food/src/",
-            "Bistro\\Inventory\\": "src/bistro/inventory/src/"
+            "Bistro\\Inventory\\": "src/bistro/inventory/src/",
+            "Bistro\\Employees\\": "src/bistro/employees/src/"
         }
     },
     "autoload-dev": {

@@ -13,10 +13,10 @@
     <tr>
       <td>{{ $ing['qty'] }}</td>
       <td>{{ $ing['uom'] }}</td>
-      <td>{{ $ing->ingredient->name }} {{ $ing->description }}
+      <td>{{ $ing->ingredient->name }}
 
           @if($ing->modifier != null )
-          {{  "[".$ing->modifier."]" }}
+          <em>&nbsp;{{  "[ ".$ing->modifier." ]" }}</em>
           @endif
       
       </td>

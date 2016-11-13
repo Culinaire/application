@@ -7,7 +7,8 @@
    
    <div class="panel-heading">
      <h2 class="panel-title">Reps</h2>
-     <div class="pull-right"><a class="btn btn-info" href="{{ route('merchantreps.create', ['merchant_id'=>$merchant->id]) }}">Add Rep</a></div>
+     <div class="pull-right"><a class="btn btn-info btn-sm" href="{{ route('merchantreps.create', ['merchant_id'=>$merchant->id]) }}"><span class="fa fa-plus"></span> Add Rep</a></div>
+     <div class="clearfix"></div>
    </div>
 
    <ul class="list-group">

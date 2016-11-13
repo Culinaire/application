@@ -3,13 +3,13 @@
 namespace Bistro\Inventory\Products\Models;
 
 use Bistro\Inventory\Merchants\Models\Merchant;
-//use Bistro\Inventory\Products\Traits\Costable;
+use Bistro\Inventory\Products\Traits\Costable;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-  //use Costable;
+  use Costable;
 
     public function merchant()
     {
@@ -35,5 +35,10 @@ class Product extends Model
         'gal' => 'gal',
         'dz' => 'dz',
       ];
+    }
+
+    public function getConversionTypeAttribute()
+    {
+      return $this->conversionType($this->pack_uom);
     }
 }
