@@ -6,3 +6,4 @@ Homestead.json
 Homestead.yaml
 .env
 resources/views/archive/
+/.env.production
